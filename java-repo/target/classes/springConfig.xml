@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- <bean id="student1" class="entities.Student">
+        <property name="name" value="abc" />
+        <property name="age" value="15" />
+    </bean> -->
+    <bean id="sdetRef" class="entities.CohortSDET" />
+
+    <bean id="trainingService" class="entities.TrainingService">
+        <property name="cohort" ref="sdetRef"/>
+    </bean>
+</beans>
